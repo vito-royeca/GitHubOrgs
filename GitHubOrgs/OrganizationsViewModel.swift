@@ -34,4 +34,8 @@ class OrganizationsViewModel {
     func organization(at index: Int) -> OrganizationModel {
         return results.value[index]
     }
+    
+    func url(of organization: OrganizationModel) -> URL? {
+        return URL(string: organization.url.replacingOccurrences(of: "api.", with: ""))
+    }
 }

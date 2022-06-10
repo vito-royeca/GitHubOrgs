@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OrganizationsViewController: UIViewController {
 
@@ -55,12 +56,14 @@ extension OrganizationsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let organization = viewModel.organization(at: indexPath.row)
+        let url = viewModel.url(of: organization)
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) as? OrganizationTableViewCell {
             cell.configure(avatarUrl: organization.avatarUrl,
                            login: organization.login,
-                           url: organization.url,
+                           url: url,
                            description: organization.description)
+            cell.delegate = self
             return cell
         } else {
             return UITableViewCell()
@@ -71,5 +74,18 @@ extension OrganizationsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension OrganizationsViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - OrganizationTableViewCellDelegate
+
+extension OrganizationsViewController: OrganizationTableViewCellDelegate {
+    func open(url: URL) {
+        let config = SFSafariViewController.Configuration()
+//        config.entersReaderIfAvailable = true
+
+        let vc = SFSafariViewController(url: url, configuration: config)
+        present(vc, animated: true)
+    }
     
 }

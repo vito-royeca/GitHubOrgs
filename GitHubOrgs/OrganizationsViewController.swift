@@ -55,14 +55,16 @@ extension OrganizationsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let organization = viewModel.organization(at: indexPath.row)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath)
         
-        var content = cell.defaultContentConfiguration()
-        content.text = organization.login
-        content.secondaryText = organization.url
-        cell.contentConfiguration = content
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "organizationCell", for: indexPath) as? OrganizationTableViewCell {
+            cell.configure(avatarUrl: organization.avatarUrl,
+                           login: organization.login,
+                           url: organization.url,
+                           description: organization.description)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 }
 

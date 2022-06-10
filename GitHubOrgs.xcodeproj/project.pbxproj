@@ -29,6 +29,9 @@
 		8B955D222852E45F0084D107 /* Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955D212852E45F0084D107 /* Bindings.swift */; };
 		8B955D232852E45F0084D107 /* Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955D212852E45F0084D107 /* Bindings.swift */; };
 		8B955D242852E45F0084D107 /* Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955D212852E45F0084D107 /* Bindings.swift */; };
+		8B955D272852E8060084D107 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8B955D262852E8060084D107 /* SDWebImage */; };
+		8B955D292852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */; };
+		8B955D2A2852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,7 @@
 		8B955D192852DFFC0084D107 /* Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
 		8B955D1D2852E04E0084D107 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
 		8B955D212852E45F0084D107 /* Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindings.swift; sourceTree = "<group>"; };
+		8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B955D272852E8060084D107 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +134,7 @@
 				8B955CF02852CA350084D107 /* LaunchScreen.storyboard */,
 				8B955CF32852CA350084D107 /* Info.plist */,
 				8B955CEB2852CA330084D107 /* GitHubOrgs.xcdatamodeld */,
+				8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */,
 			);
 			path = GitHubOrgs;
 			sourceTree = "<group>";
@@ -166,6 +172,9 @@
 			dependencies = (
 			);
 			name = GitHubOrgs;
+			packageProductDependencies = (
+				8B955D262852E8060084D107 /* SDWebImage */,
+			);
 			productName = GitHubOrgs;
 			productReference = 8B955CDF2852CA330084D107 /* GitHubOrgs.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 8B955CD62852CA330084D107;
+			packageReferences = (
+				8B955D252852E8060084D107 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 8B955CE02852CA330084D107 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +296,7 @@
 				8B955CE72852CA330084D107 /* OrganizationsViewController.swift in Sources */,
 				8B955D1A2852DFFC0084D107 /* Binder.swift in Sources */,
 				8B955D162852DA700084D107 /* OrganizationModel.swift in Sources */,
+				8B955D292852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */,
 				8B955CED2852CA330084D107 /* GitHubOrgs.xcdatamodeld in Sources */,
 				8B955D1E2852E04E0084D107 /* OrganizationsViewModel.swift in Sources */,
 				8B955CE32852CA330084D107 /* AppDelegate.swift in Sources */,
@@ -310,6 +323,7 @@
 			files = (
 				8B955D202852E04E0084D107 /* OrganizationsViewModel.swift in Sources */,
 				8B955D092852CA360084D107 /* GitHubOrgsUITestsLaunchTests.swift in Sources */,
+				8B955D2A2852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */,
 				8B955D182852DA700084D107 /* OrganizationModel.swift in Sources */,
 				8B955D072852CA360084D107 /* GitHubOrgsUITests.swift in Sources */,
 				8B955D1C2852DFFC0084D107 /* Binder.swift in Sources */,
@@ -632,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B955D252852E8060084D107 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B955D262852E8060084D107 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B955D252852E8060084D107 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8B955CEB2852CA330084D107 /* GitHubOrgs.xcdatamodeld */ = {

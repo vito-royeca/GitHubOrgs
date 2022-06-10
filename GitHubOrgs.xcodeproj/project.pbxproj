@@ -128,13 +128,13 @@
 				8B955D212852E45F0084D107 /* Bindings.swift */,
 				8B955D152852DA700084D107 /* OrganizationModel.swift */,
 				8B955CE62852CA330084D107 /* OrganizationsViewController.swift */,
+				8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */,
 				8B955D1D2852E04E0084D107 /* OrganizationsViewModel.swift */,
 				8B955CE82852CA330084D107 /* Main.storyboard */,
 				8B955CEE2852CA350084D107 /* Assets.xcassets */,
 				8B955CF02852CA350084D107 /* LaunchScreen.storyboard */,
 				8B955CF32852CA350084D107 /* Info.plist */,
 				8B955CEB2852CA330084D107 /* GitHubOrgs.xcdatamodeld */,
-				8B955D282852EA6E0084D107 /* OrganizationTableViewCell.swift */,
 			);
 			path = GitHubOrgs;
 			sourceTree = "<group>";

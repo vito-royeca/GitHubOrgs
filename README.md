@@ -1,2 +1,3 @@
-# GitHubOrgs
-An iOS app that displays Git Hubs organizations
+# GitHub Orgs
+An iOS app that displays GitHub;s organizations.
+

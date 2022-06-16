@@ -24,3 +24,19 @@ extension UITableView {
         }
     }
 }
+
+extension UILabel {
+    
+    /// Bind a UITableView in order to reload it automatically once the datasource array mutates
+    ///
+    /// Example:
+    /// ```
+    /// tableView.bindTo(viewModel.results)
+    /// ```
+    /// - Parameter bindable: the bounded property
+    func bindTo<T>(_ bindable: Binder<T>) {
+        bindable.bind { [weak self] _ in
+            self?.text = "\(bindable.value)"
+        }
+    }
+}

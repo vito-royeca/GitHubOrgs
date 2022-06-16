@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7072B1285BB1050078CE31 /* OrganizationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7072B0285BB1050078CE31 /* OrganizationDetailsModel.swift */; };
+		8B7072B3285BB1570078CE31 /* OrganizationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7072B2285BB1570078CE31 /* OrganizationDetailsViewController.swift */; };
+		8B7072B4285BB1570078CE31 /* OrganizationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7072B2285BB1570078CE31 /* OrganizationDetailsViewController.swift */; };
+		8B7072B6285BB1790078CE31 /* OrganizationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7072B5285BB1790078CE31 /* OrganizationDetailsViewModel.swift */; };
+		8B7072B7285BB1790078CE31 /* OrganizationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7072B5285BB1790078CE31 /* OrganizationDetailsViewModel.swift */; };
 		8B955CE32852CA330084D107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955CE22852CA330084D107 /* AppDelegate.swift */; };
 		8B955CE52852CA330084D107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955CE42852CA330084D107 /* SceneDelegate.swift */; };
 		8B955CE72852CA330084D107 /* OrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B955CE62852CA330084D107 /* OrganizationsViewController.swift */; };
@@ -52,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B7072B0285BB1050078CE31 /* OrganizationDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationDetailsModel.swift; sourceTree = "<group>"; };
+		8B7072B2285BB1570078CE31 /* OrganizationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationDetailsViewController.swift; sourceTree = "<group>"; };
+		8B7072B5285BB1790078CE31 /* OrganizationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationDetailsViewModel.swift; sourceTree = "<group>"; };
 		8B955CDF2852CA330084D107 /* GitHubOrgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubOrgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B955CE22852CA330084D107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B955CE42852CA330084D107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B7072AF285BB0A80078CE31 /* OrganizationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8B7072B0285BB1050078CE31 /* OrganizationDetailsModel.swift */,
+				8B7072B2285BB1570078CE31 /* OrganizationDetailsViewController.swift */,
+				8B7072B5285BB1790078CE31 /* OrganizationDetailsViewModel.swift */,
+			);
+			path = OrganizationDetails;
+			sourceTree = "<group>";
+		};
 		8B955CD62852CA330084D107 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +140,7 @@
 		8B955CE12852CA330084D107 /* GitHubOrgs */ = {
 			isa = PBXGroup;
 			children = (
+				8B7072AF285BB0A80078CE31 /* OrganizationDetails */,
 				8B955CE22852CA330084D107 /* AppDelegate.swift */,
 				8B955CE42852CA330084D107 /* SceneDelegate.swift */,
 				8B955D192852DFFC0084D107 /* Binder.swift */,
@@ -293,12 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7072B3285BB1570078CE31 /* OrganizationDetailsViewController.swift in Sources */,
 				8B955CE72852CA330084D107 /* OrganizationsViewController.swift in Sources */,
 				8B955D1A2852DFFC0084D107 /* Binder.swift in Sources */,
 				8B955D162852DA700084D107 /* OrganizationModel.swift in Sources */,
 				8B955D292852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */,
 				8B955CED2852CA330084D107 /* GitHubOrgs.xcdatamodeld in Sources */,
+				8B7072B1285BB1050078CE31 /* OrganizationDetailsModel.swift in Sources */,
 				8B955D1E2852E04E0084D107 /* OrganizationsViewModel.swift in Sources */,
+				8B7072B6285BB1790078CE31 /* OrganizationDetailsViewModel.swift in Sources */,
 				8B955CE32852CA330084D107 /* AppDelegate.swift in Sources */,
 				8B955CE52852CA330084D107 /* SceneDelegate.swift in Sources */,
 				8B955D222852E45F0084D107 /* Bindings.swift in Sources */,
@@ -311,6 +333,7 @@
 			files = (
 				8B955D232852E45F0084D107 /* Bindings.swift in Sources */,
 				8B955D172852DA700084D107 /* OrganizationModel.swift in Sources */,
+				8B7072B7285BB1790078CE31 /* OrganizationDetailsViewModel.swift in Sources */,
 				8B955D1B2852DFFC0084D107 /* Binder.swift in Sources */,
 				8B955CFD2852CA360084D107 /* GitHubOrgsTests.swift in Sources */,
 				8B955D1F2852E04E0084D107 /* OrganizationsViewModel.swift in Sources */,
@@ -325,6 +348,7 @@
 				8B955D092852CA360084D107 /* GitHubOrgsUITestsLaunchTests.swift in Sources */,
 				8B955D2A2852EA6E0084D107 /* OrganizationTableViewCell.swift in Sources */,
 				8B955D182852DA700084D107 /* OrganizationModel.swift in Sources */,
+				8B7072B4285BB1570078CE31 /* OrganizationDetailsViewController.swift in Sources */,
 				8B955D072852CA360084D107 /* GitHubOrgsUITests.swift in Sources */,
 				8B955D1C2852DFFC0084D107 /* Binder.swift in Sources */,
 				8B955D242852E45F0084D107 /* Bindings.swift in Sources */,

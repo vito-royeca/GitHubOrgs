@@ -74,7 +74,17 @@ extension OrganizationsViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension OrganizationsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let organization = viewModel.organization(at: indexPath.row)
+        let detailsView = OrganizationDetailsViewController()
+        detailsView.login = organization.login
+        
+        self.navigationController?.pushViewController(detailsView, animated: true)
+    }
     
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//
+//    }
 }
 
 // MARK: - OrganizationTableViewCellDelegate
